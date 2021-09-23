@@ -3,10 +3,20 @@
     "version":"1.0",
     "description":"Apply dark theme to Duolingo website for web version.",
     "author":"Marco Aurelio",
-    "browser_action":{
-        "default_title":"Duolingo Dark Theme",
-        "default_popup":"index.html",
-        "default_icon":"icon.png"
-    },
+    "content_scripts": [
+        {
+            "matches":[
+                "https://www.duolingo.com/learn"
+            ],
+            "css": [
+                "stylesheet.css"
+            ],
+            "js": [
+                "script.js"
+            ]
+        }
+        
+    ],
+   
     "manifest_version":2
 }

@@ -4,8 +4,19 @@
 
 //     })
 // })
-https://d35aaqx5ub95lt.cloudfront.net/css/app-96fe7888.css
+// https://d35aaqx5ub95lt.cloudfront.net/css/app-96fe7888.css
+
+// document.body.style.backgroundColor = "red";
 const html = document.querySelector("html")
+
+var x = document.querySelectorAll("body");
+var i;
+for (i = 0; i < x.length; i++) {
+  x[i].style.backgroundColor = "red";
+}
+
+
+
 // const site = document.querySelector("https://d35aaqx5ub95lt.cloudfront.net/css/app-96fe7888.css")
 
 const checkbox = document.querySelector("input[name=theme]")
@@ -27,7 +38,8 @@ const darkMode = {
     bg: "#333333",
     bgPanel: "#434343",
     colorHeadings: "#3664FF",
-    colorText: "#B5B5B5"
+    colorText: "#B5B5B5",
+   
 }
 
 const transformKey = key => 
@@ -36,7 +48,10 @@ const transformKey = key =>
 
 const changeColors = (colors) => {
     Object.keys(colors).map(key => 
-        html.style.setProperty(transformKey(key), colors[key]) 
+        html.style.setProperty(transformKey(key), colors[key]),
+      
+      
+        
     )
 }
 
