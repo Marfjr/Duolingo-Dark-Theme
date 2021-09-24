@@ -10,10 +10,8 @@
 const html = document.querySelector("html")
 
 var x = document.querySelectorAll("body");
-var i;
-for (i = 0; i < x.length; i++) {
-  x[i].style.backgroundColor = "red";
-}
+
+
 
 
 
@@ -39,6 +37,7 @@ const darkMode = {
     bgPanel: "#434343",
     colorHeadings: "#3664FF",
     colorText: "#B5B5B5",
+    
    
 }
 
@@ -50,9 +49,16 @@ const changeColors = (colors) => {
     Object.keys(colors).map(key => 
         html.style.setProperty(transformKey(key), colors[key]),
       
+        
       
         
     )
+    var x = document.querySelectorAll("body");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.backgroundColor = "red"
+    }
+   
 }
 
 
